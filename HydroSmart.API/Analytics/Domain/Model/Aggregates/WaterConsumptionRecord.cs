@@ -1,5 +1,5 @@
 namespace HydroSmart.API.Analytics.Domain.Model.Aggregates;
-
+// Aggregate root for water consumption records
 public class WaterConsumptionRecord
 {
     public int Id { get; set; }
