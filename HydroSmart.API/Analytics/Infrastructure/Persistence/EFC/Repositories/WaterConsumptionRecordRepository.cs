@@ -5,7 +5,7 @@ using HydroSmart.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace HydroSmart.API.Analytics.Infrastructure.Persistence.EFC.Repositories;
-
+//class to implement IWaterConsumptionRecordRepository using Entity Framework Core
 public class WaterConsumptionRecordRepository : BaseRepository<WaterConsumptionRecord>, IWaterConsumptionRecordRepository
 {
     public WaterConsumptionRecordRepository(AppDbContext context) : base(context)
