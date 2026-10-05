@@ -32,3 +32,39 @@ public static class CreateWaterConsumptionRecordCommandFromResourceAssembler
         );
     }
 }
+
+public static class TimeBlockResourceFromEntityAssembler
+{
+    public static TimeBlockResource ToResourceFromRecord(TimeBlockConsumption record)
+    {
+        return new TimeBlockResource
+        {
+            TimeBlock = record.TimeBlock,
+            Liters = record.Liters
+        };
+    }
+}
+// class to convert CategoryConsumption entity to CategoryBreakdownResource
+public static class CategoryBreakdownResourceFromEntityAssembler
+{
+    public static CategoryBreakdownResource ToResourceFromRecord(CategoryConsumption record)
+    {
+        return new CategoryBreakdownResource
+        {
+            Category = record.Category,
+            Liters = record.Liters
+        };
+    }
+}
+// class to convert MonthlyConsumption entity to MonthlyComparisonResource
+public static class MonthlyComparisonResourceFromEntityAssembler
+{
+    public static MonthlyComparisonResource ToResourceFromRecord(MonthlyConsumption record)
+    {
+        return new MonthlyComparisonResource
+        {
+            Month = record.Month,
+            Liters = record.Liters
+        };
+    }
+}
