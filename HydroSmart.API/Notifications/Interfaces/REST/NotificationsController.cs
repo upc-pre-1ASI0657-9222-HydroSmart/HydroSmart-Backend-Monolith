@@ -15,9 +15,7 @@ public class NotificationsController : ControllerBase
         _notificationsContextFacade = notificationsContextFacade;
     }
 
-    /// <summary>
-    /// Get all notifications for a specific user
-    /// </summary>
+    // Get all notifications for a specific user
     [HttpGet("user/{userId}")]
     public async Task<ActionResult<IEnumerable<NotificationResource>>> GetNotificationsByUserId(int userId)
     {
@@ -25,9 +23,7 @@ public class NotificationsController : ControllerBase
         return Ok(notifications);
     }
 
-    /// <summary>
-    /// Get unread notifications for a specific user
-    /// </summary>
+    // Get unread notifications for a specific user
     [HttpGet("user/{userId}/unread")]
     public async Task<ActionResult<IEnumerable<NotificationResource>>> GetUnreadNotificationsByUserId(int userId)
     {
@@ -35,9 +31,7 @@ public class NotificationsController : ControllerBase
         return Ok(notifications);
     }
 
-    /// <summary>
-    /// Get notification count unread for a specific user
-    /// </summary>
+    // Get notification count unread for a specific user
     [HttpGet("user/{userId}/unread-count")]
     public async Task<ActionResult<int>> CountUnreadNotifications(int userId)
     {
@@ -45,9 +39,7 @@ public class NotificationsController : ControllerBase
         return Ok(count);
     }
 
-    /// <summary>
-    /// Get a specific notification by ID
-    /// </summary>
+    // Get a specific notification by ID
     [HttpGet("{id}")]
     public async Task<ActionResult<NotificationResource>> GetNotificationById(int id)
     {
@@ -57,9 +49,7 @@ public class NotificationsController : ControllerBase
         return Ok(notification);
     }
 
-    /// <summary>
-    /// Create a new notification
-    /// </summary>
+    // Create a new notification
     [HttpPost]
     public async Task<ActionResult<NotificationResource>> CreateNotification([FromBody] CreateNotificationRequest request)
     {
@@ -67,9 +57,7 @@ public class NotificationsController : ControllerBase
         return CreatedAtAction(nameof(GetNotificationById), new { id = notification?.Id }, notification);
     }
 
-    /// <summary>
-    /// Mark a notification as read
-    /// </summary>
+    // Mark a notification as 'read'
     [HttpPut("{id}/mark-as-read")]
     public async Task<ActionResult<NotificationResource>> MarkAsRead(int id)
     {
@@ -79,9 +67,7 @@ public class NotificationsController : ControllerBase
         return Ok(notification);
     }
 
-    /// <summary>
-    /// Mark a notification as unread
-    /// </summary>
+    // Mark a notification as 'unread'
     [HttpPut("{id}/mark-as-unread")]
     public async Task<ActionResult<NotificationResource>> MarkAsUnread(int id)
     {
@@ -91,9 +77,7 @@ public class NotificationsController : ControllerBase
         return Ok(notification);
     }
 
-    /// <summary>
-    /// Delete a notification
-    /// </summary>
+    // Delete a notification
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteNotification(int id)
     {
