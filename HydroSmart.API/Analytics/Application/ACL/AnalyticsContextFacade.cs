@@ -20,7 +20,7 @@ public class AnalyticsContextFacade : IAnalyticsContextFacade
         _queryService = queryService;
         _commandService = commandService;
     }
-
+// method to get the dashboard data for a specific user
     public async Task<DashboardResource> GetDashboard(int userId)
     {
         var monthlyTotalAndGoal = await _queryService.Handle(new GetMonthlyTotalAndGoalQuery(userId));
@@ -38,7 +38,7 @@ public class AnalyticsContextFacade : IAnalyticsContextFacade
         var savingsPercentage = previousMonthLiters > 0
             ? Math.Round((currentMonthLiters - previousMonthLiters) / previousMonthLiters * 100, 2)
             : 0;
-
+// If previous month is 0, we can't calculate a percentage, so we set it to 0.
         return new DashboardResource
         {
             MonthlyConsumptionLiters = currentMonthLiters,

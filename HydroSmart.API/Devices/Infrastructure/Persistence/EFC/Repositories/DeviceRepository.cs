@@ -5,7 +5,7 @@ using HydroSmart.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace HydroSmart.API.Devices.Infrastructure.Persistence.EFC.Repositories;
-
+// feature: Implement DeviceRepository to handle device data access and retrieval from the database
 public class DeviceRepository(AppDbContext context) : BaseRepository<Device>(context), IDeviceRepository
 {
     public async Task<IEnumerable<Device>> FindBySectionAsync(string section)

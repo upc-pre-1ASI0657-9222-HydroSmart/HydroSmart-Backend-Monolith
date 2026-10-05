@@ -44,7 +44,7 @@ public static class TimeBlockResourceFromEntityAssembler
         };
     }
 }
-
+// class to convert CategoryConsumption entity to CategoryBreakdownResource
 public static class CategoryBreakdownResourceFromEntityAssembler
 {
     public static CategoryBreakdownResource ToResourceFromRecord(CategoryConsumption record)
@@ -56,7 +56,7 @@ public static class CategoryBreakdownResourceFromEntityAssembler
         };
     }
 }
-
+// class to convert MonthlyConsumption entity to MonthlyComparisonResource
 public static class MonthlyComparisonResourceFromEntityAssembler
 {
     public static MonthlyComparisonResource ToResourceFromRecord(MonthlyConsumption record)

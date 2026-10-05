@@ -3,7 +3,7 @@ using HydroSmart.API.Devices.Domain.Model.Commands;
 using HydroSmart.API.Devices.Interfaces.REST.Resources;
 
 namespace HydroSmart.API.Devices.Interfaces.REST.Transform;
-
+//feature: UpdateDeviceCommandFromResourceAssembler
 public static class UpdateDeviceCommandFromResourceAssembler
 {
     public static UpdateDeviceCommand ToCommandFromResource(

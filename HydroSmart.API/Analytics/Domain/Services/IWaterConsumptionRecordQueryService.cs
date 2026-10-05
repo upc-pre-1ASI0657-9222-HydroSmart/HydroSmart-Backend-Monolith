@@ -1,7 +1,7 @@
 using HydroSmart.API.Analytics.Domain.Model.Queries;
 
 namespace HydroSmart.API.Analytics.Domain.Services;
-
+// interface to define the contract for querying water consumption records
 public interface IWaterConsumptionRecordQueryService
 {
     Task<double> Handle(GetTodayConsumptionByUserIdQuery query);
