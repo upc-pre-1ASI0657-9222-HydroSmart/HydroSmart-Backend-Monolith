@@ -22,7 +22,10 @@ public class ReportsController(
     /// </summary>
     [HttpGet]
     [AllowAnonymous]
-    [SwaggerOperation("Get All Reports", "Get all reports.", OperationId = "GetAllReports")]
+   [SwaggerOperation(
+       Summary = "Get all reports",
+       Description = "Retrieves the list of generated HydroSmart reports for dashboard and history visualization.",
+       OperationId = "GetAllReports")]
     [SwaggerResponse(200, "Reports found and returned.", typeof(IEnumerable<ReportResource>))]
     public async Task<IActionResult> GetAllReports()
     {
@@ -56,7 +59,10 @@ public class ReportsController(
     /// </summary>
     [HttpPost]
     [AllowAnonymous]
-    [SwaggerOperation("Create Report", "Create a new report.", OperationId = "CreateReport")]
+    [SwaggerOperation(
+        Summary = "Create report",
+        Description = "Creates a new HydroSmart consumption report with the provided report information.",
+        OperationId = "CreateReport")]
     [SwaggerResponse(201, "Report created successfully.", typeof(ReportResource))]
     [SwaggerResponse(400, "Report could not be created.")]
     public async Task<IActionResult> CreateReport([FromBody] CreateReportResource resource)
@@ -83,8 +89,10 @@ public class ReportsController(
     /// </summary>
     [HttpPut("{reportId:int}")]
     [AllowAnonymous]
-    [SwaggerOperation("Update Report", "Update an existing report by its unique identifier.", OperationId = "UpdateReport")]
-    [SwaggerResponse(200, "Report updated successfully.", typeof(ReportResource))]
+[SwaggerOperation(
+    Summary = "Update report",
+    Description = "Updates an existing HydroSmart report using its identifier and the provided report information.",
+    OperationId = "UpdateReport")]    [SwaggerResponse(200, "Report updated successfully.", typeof(ReportResource))]
     [SwaggerResponse(404, "Report not found.")]
     public async Task<IActionResult> UpdateReport(int reportId, [FromBody] UpdateReportResource resource)
     {
@@ -106,7 +114,10 @@ public class ReportsController(
     /// </summary>
     [HttpDelete("{reportId:int}")]
     [AllowAnonymous]
-    [SwaggerOperation("Delete Report", "Delete an existing report by its unique identifier.", OperationId = "DeleteReport")]
+    [SwaggerOperation(
+    Summary = "Delete report",
+    Description = "Deletes an existing HydroSmart report using its unique identifier.",
+    OperationId = "DeleteReport")]
     [SwaggerResponse(204, "Report deleted successfully.")]
     [SwaggerResponse(404, "Report not found.")]
     public async Task<IActionResult> DeleteReport(int reportId)
