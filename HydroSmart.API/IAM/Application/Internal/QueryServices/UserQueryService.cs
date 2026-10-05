@@ -4,7 +4,7 @@ using HydroSmart.API.IAM.Domain.Repositories;
 using HydroSmart.API.IAM.Domain.Services;
 
 namespace HydroSmart.API.IAM.Application.Internal.QueryServices;
-
+// feature: implement user query service
 public class UserQueryService(IUserRepository userRepository) : IUserQueryService
 {
     public async Task<IEnumerable<User>> Handle(GetAllUsersQuery query)
