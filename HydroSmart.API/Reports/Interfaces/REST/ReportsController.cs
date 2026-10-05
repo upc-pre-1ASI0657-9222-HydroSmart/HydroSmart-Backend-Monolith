@@ -125,7 +125,7 @@ public class ReportsController(
         var deleted = await reportCommandService.HandleDelete(reportId);
 
         if (!deleted)
-            return NotFound(new { message = "Report not found" });
+            return NotFound(new { message = "Report not found." });
 
         return NoContent();
     }
