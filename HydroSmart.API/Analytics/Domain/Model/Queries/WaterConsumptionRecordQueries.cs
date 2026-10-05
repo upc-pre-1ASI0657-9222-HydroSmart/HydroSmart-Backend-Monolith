@@ -1,5 +1,5 @@
 namespace HydroSmart.API.Analytics.Domain.Model.Queries;
-
+// Query value objects
 public record GetTodayConsumptionByUserIdQuery(int UserId);
 public record GetDailyConsumptionByUserIdQuery(int UserId);
 public record GetConsumptionByCategoryQuery(int UserId);
