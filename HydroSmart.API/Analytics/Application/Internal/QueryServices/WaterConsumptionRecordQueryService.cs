@@ -3,7 +3,7 @@ using HydroSmart.API.Analytics.Domain.Repositories;
 using HydroSmart.API.Analytics.Domain.Services;
 
 namespace HydroSmart.API.Analytics.Application.Internal.QueryServices;
-
+// implementation of the water consumption record query service
 public class WaterConsumptionRecordQueryService : IWaterConsumptionRecordQueryService
 {
     private const double MonthlyGoalLiters = 8000.0;
