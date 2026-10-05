@@ -8,8 +8,6 @@ public interface IProfileCommandService
     /// <summary>
     /// Handle Create Profile Command
     /// </summary>
-    /// <param name="command">The <see cref="CreateProfileCommand"/> command</param>
-    /// <returns>The created <see cref="Profile"/> object</returns>
     Task<Profile?> Handle(CreateProfileCommand command);
 
     /// <summary>
