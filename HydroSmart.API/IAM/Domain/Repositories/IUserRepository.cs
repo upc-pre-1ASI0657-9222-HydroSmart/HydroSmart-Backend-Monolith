@@ -2,7 +2,7 @@ using HydroSmart.API.IAM.Domain.Model.Aggregates;
 using HydroSmart.API.Shared.Domain.Repositories;
 
 namespace HydroSmart.API.IAM.Domain.Repositories;
-
+//feature: add IUserRepository interface
 public interface IUserRepository : IBaseRepository<User>
 {
     /// <summary>
