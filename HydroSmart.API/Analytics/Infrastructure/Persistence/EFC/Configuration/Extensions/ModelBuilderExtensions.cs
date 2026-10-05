@@ -2,7 +2,7 @@ using HydroSmart.API.Analytics.Domain.Model.Aggregates;
 using Microsoft.EntityFrameworkCore;
 
 namespace HydroSmart.API.Analytics.Infrastructure.Persistence.EFC.Configuration.Extensions;
-
+//class to extend ModelBuilder to apply configuration for Analytics Context
 public static class ModelBuilderExtensions
 {
     public static void ApplyAnalyticsConfiguration(this ModelBuilder builder)

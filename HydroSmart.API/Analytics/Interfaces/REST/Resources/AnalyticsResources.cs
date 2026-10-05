@@ -1,5 +1,5 @@
 namespace HydroSmart.API.Analytics.Interfaces.REST.Resources;
-
+//class to represent the dashboard data for a user
 public class DashboardResource
 {
     public double MonthlyConsumptionLiters { get; set; }

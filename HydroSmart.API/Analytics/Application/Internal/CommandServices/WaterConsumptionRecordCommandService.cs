@@ -5,7 +5,7 @@ using HydroSmart.API.Analytics.Domain.Services;
 using HydroSmart.API.Shared.Domain.Repositories;
 
 namespace HydroSmart.API.Analytics.Application.Internal.CommandServices;
-
+// implementation of the IWaterConsumptionRecordCommandService interface
 public class WaterConsumptionRecordCommandService : IWaterConsumptionRecordCommandService
 {
     private readonly IWaterConsumptionRecordRepository _repository;
