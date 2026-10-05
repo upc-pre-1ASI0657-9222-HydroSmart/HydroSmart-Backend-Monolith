@@ -2,7 +2,7 @@ using HydroSmart.API.Devices.Domain.Model.Aggregates;
 using Microsoft.EntityFrameworkCore;
 
 namespace HydroSmart.API.Devices.Infrastructure.Persistence.EFC.Configuration.Extensions;
-
+// feature: ModelBuilderExtensions.cs
 public static class ModelBuilderExtensions
 {
     public static void ApplyDevicesConfiguration(this ModelBuilder builder)
