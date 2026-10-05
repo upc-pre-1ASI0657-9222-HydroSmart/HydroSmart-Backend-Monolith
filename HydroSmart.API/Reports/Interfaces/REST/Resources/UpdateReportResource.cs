@@ -1,3 +1,7 @@
+
+/// <summary>
+/// Represents the data required to update an existing HydroSmart report.
+/// </summary>
 namespace HydroSmart.API.Reports.Interfaces.REST.Resources;
 
 public class UpdateReportResource
