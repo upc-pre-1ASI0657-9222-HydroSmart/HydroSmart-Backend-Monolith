@@ -1,3 +1,6 @@
+/// <summary>
+/// Represents the data required to create a new HydroSmart report.
+/// </summary>
 namespace HydroSmart.API.Reports.Interfaces.REST.Resources;
 
 public class ReportResource
