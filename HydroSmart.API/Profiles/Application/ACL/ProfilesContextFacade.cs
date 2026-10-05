@@ -24,7 +24,7 @@ public class ProfilesContextFacade : IProfilesContextFacade
         _unitOfWork = unitOfWork;
     }
 
-    /// <inheritdoc />
+    /// <inheritdoc/>
     public async Task<ProfileResource?> FetchProfileByUserId(int userId)
     {
         var getProfileByUserIdQuery = new GetProfileByUserIdQuery(userId);
