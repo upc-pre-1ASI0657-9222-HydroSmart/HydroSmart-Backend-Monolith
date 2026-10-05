@@ -1,5 +1,5 @@
 namespace HydroSmart.API.Devices.Domain.Model.Aggregates;
-
+// feat add device classa
 public class Device
 {
     public int Id { get; private set; }
